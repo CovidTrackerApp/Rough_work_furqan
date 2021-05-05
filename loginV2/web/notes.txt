@@ -1,0 +1,65 @@
+sudo docker-compose up -d
+
+sudo docker ps -a
+
+sudo docker exec -it <Container name here> bash
+
+# For accessing mongo db database run
+mongo
+show dbs
+
+# for switching to collections
+show collections
+use <collection name>
+
+# for showing data values in collection
+db.Users.find().pretty()
+
+# for removing any document type
+db.COLLECTION_NAME.remove(DELETION CRITERIA)
+# e.g.
+db.Users.remove({"username": "furqan"})
+
+# for deleting collection from the database
+db.COLLECTION_NAME.drop()
+
+
+# for stopping the Container
+sudo docker-compose down
+
+# for checking docker images and containers
+docker images
+docker container
+
+docker images ls
+docker container ls
+
+docker container stop <container id>
+docker container start <container id>
+
+
+
+# For sending emails through flask, read this blog:
+https://pythonbasics.org/flask-mail/
+
+
+# The right protocol to use with smtp/mailing services is 465
+# specify username with complete domain name as well such as: Dont: furqan4545 except Do: furqan4545@yandex.ru
+# also the sender email should be same as the domain email which is furqan4545@yandex.ru
+
+# also note when u are using  smtp authentication as ->ssl then u need to use port 465 and if u are using tls then u need to use 
+# port 587 
+
+
+
+# Data encryption python great blog.
+https://levelup.gitconnected.com/coding-aes128-bit-encryption-in-python-in-less-than-5-minutes-f6bcbddd2b82
+
+
+# bcrypt is not an encryption function, it's a password hashing function, relying on Blowfish's key scheduling, not its encryption. Hashing are mathematical
+# one-way functions, meaning there is no* way to reverse the output string to get the input string.
+
+
+
+
+

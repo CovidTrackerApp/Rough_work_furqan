@@ -1,0 +1,21 @@
+version: '3'
+
+volumes:
+  data_volume:
+    external: true
+
+services: 
+  web:
+    build: ./web
+    ports: 
+      - "5000:5000"
+    links: 
+      - db
+    volumes:
+      - /usr/src/app/credential_keys
+      - /usr/src/app/uploads
+
+  db:
+    build: ./db
+
+
